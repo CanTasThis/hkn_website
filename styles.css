@@ -266,14 +266,12 @@ em{font-style:italic}
 .hero-body{position:relative;z-index:5;padding-bottom:7vh}
 .hero-name{
   font-family:var(--font-display);
-  font-size:clamp(74px,17vw,250px);
+  font-size:clamp(88px,22vw,320px);
   font-weight:var(--display-weight);
-  line-height:.86;letter-spacing:.01em;
+  line-height:.86;letter-spacing:.06em;
   text-align:center;color:var(--paper);
-  /* shadow separates text from any photo content behind it */
   text-shadow:0 4px 80px rgba(20,18,15,.55);
 }
-.hero-name .ust{display:block;color:var(--clay);text-shadow:0 4px 80px rgba(20,18,15,.7)}
 .hero-sub{
   display:flex;flex-wrap:wrap;gap:8px 26px;align-items:center;justify-content:center;
   margin-top:34px;font-size:clamp(13px,1.1vw,15px);letter-spacing:.16em;text-transform:uppercase;
@@ -652,7 +650,7 @@ section{position:relative}
   .quote p{font-size:19px}
 }
 @media(max-width:400px){
-  .hero-name{font-size:clamp(58px,21vw,74px)}
+  .hero-name{font-size:clamp(72px,24vw,110px)}
   .hero-cities{flex-wrap:wrap;justify-content:center;gap:10px 16px}
   .hero-top{padding-top:90px}
   /* sec-title minimum even smaller on tiny screens */
@@ -670,7 +668,7 @@ section{position:relative}
 /* mobile landscape: hero must not overflow / be unreadable */
 @media(max-height:500px) and (orientation:landscape){
   .hero{min-height:100svh}
-  .hero-name{font-size:clamp(36px,12vh,72px)}
+  .hero-name{font-size:clamp(52px,16vh,100px)}
   .hero-top{padding-top:64px}
   .hero-body{padding-bottom:2vh}
   .hero-sub{margin-top:10px;font-size:12px}
