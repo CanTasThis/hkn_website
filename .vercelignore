@@ -1,0 +1,13 @@
+# Sunucu/geliştirme dosyaları — Vercel statik + api/ functions deploy'una dahil etme
+node_modules
+.git
+.env
+.env.example
+.claude
+.thumbnail
+.image-slots.state.json
+server.js
+railway.json
+render.yaml
+CLAUDE.md
+*.jsx
