@@ -191,7 +191,7 @@ em{font-style:italic}
 .nav-links a:hover{opacity:1}
 .nav-cta{
   font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;
-  padding:11px 22px;border:1px solid currentColor;border-radius:2px;
+  padding:11px 24px;border:1px solid currentColor;border-radius:100px;
   transition:all .5s var(--bezier);
 }
 .nav.scrolled .nav-cta:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
@@ -371,7 +371,7 @@ section{position:relative}
 .sig{font-family:var(--font-display);font-style:italic;font-size:34px;margin-top:34px;color:var(--ink)}
 
 .creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
-.cred{font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:9px 16px;border:1px solid var(--line);border-radius:2px;color:var(--ink-soft)}
+.cred{font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:9px 16px;border:1px solid var(--line);border-radius:100px;color:var(--ink-soft)}
 .cred b{color:var(--ink);font-weight:500}
 
 /* stats */
@@ -431,7 +431,7 @@ section{position:relative}
 .vcard:hover .vthumb image-slot{transform:scale(1.05)}
 .vthumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(20,18,15,.5));pointer-events:none;z-index:2}
 .vbadges{position:absolute;top:14px;left:14px;z-index:3;display:flex;gap:7px}
-.vbadge{font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:rgba(245,241,234,.92);color:var(--noir);padding:6px 10px;border-radius:2px;font-weight:500;white-space:nowrap}
+.vbadge{font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:rgba(245,241,234,.92);color:var(--noir);padding:5px 11px;border-radius:100px;font-weight:500;white-space:nowrap}
 .vbadge.lvl{background:var(--clay);color:var(--noir)}
 .vdur{position:absolute;bottom:14px;right:14px;z-index:3;font-size:12px;letter-spacing:.08em;color:var(--paper);display:flex;align-items:center;gap:6px}
 .vplay{position:absolute;inset:0;z-index:3;display:grid;place-items:center;opacity:0;transition:opacity .5s var(--bezier)}
@@ -660,7 +660,7 @@ section{position:relative}
 .mp-total .tl{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
 .mp-total .tv{font-family:var(--font-display);font-size:42px}
 .pay-fields{display:flex;flex-direction:column;gap:16px;margin-bottom:24px}
-.pay-fields .field input{border:1px solid var(--line);padding:14px 14px;border-radius:2px}
+.pay-fields .field input{border:1px solid var(--line);padding:14px 14px;border-radius:8px}
 .pay-fields .field input:focus{border-color:var(--clay)}
 .pay-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .modal-panel .btn-solid{justify-content:center}
