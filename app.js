@@ -123,7 +123,7 @@
 
     article.querySelector('[data-buy]').addEventListener('click', e => {
       e.stopPropagation();
-      openModal(v.id);
+      showConfirm(v.id);
     });
     article.addEventListener('click', () => openModal(v.id));
 
@@ -300,6 +300,40 @@
     if (preFocusEl) { preFocusEl.focus(); preFocusEl = null; }
   }
 
+  /* ---------- Confirm dialog ---------- */
+  const cdVeil  = document.getElementById('cdialogVeil');
+  const cdDialog = document.getElementById('cdialog');
+  let pendingVideoId = null;
+
+  function showConfirm(id) {
+    pendingVideoId = id;
+    cdVeil.classList.add('show');
+    cdDialog.classList.add('show');
+    cdDialog.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(() => {
+      const ok = document.getElementById('cdialogOk');
+      if (ok) ok.focus();
+    });
+  }
+
+  function closeConfirm() {
+    cdVeil.classList.remove('show');
+    cdDialog.classList.remove('show');
+    cdDialog.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    pendingVideoId = null;
+  }
+
+  document.getElementById('cdialogCancel').addEventListener('click', closeConfirm);
+  document.getElementById('cdialogOk').addEventListener('click', () => {
+    const id = pendingVideoId;
+    closeConfirm();
+    openModal(id);
+  });
+  cdVeil.addEventListener('click', closeConfirm);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && cdDialog.classList.contains('show')) closeConfirm(); });
+
   // Focus trap
   modal.addEventListener('keydown', e => {
     if (e.key !== 'Tab') return;
@@ -314,7 +348,7 @@
 
   veil.addEventListener('click', closeModal);
   modal.querySelector('.modal-x').addEventListener('click', closeModal);
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('show')) closeModal(); });
   modal.querySelector('[data-pay]').addEventListener('click', () => modal.classList.add('done'));
   modal.querySelector('[data-done]').addEventListener('click', closeModal);
 

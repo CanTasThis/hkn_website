@@ -144,8 +144,29 @@
   </div>
 </section>
 
+<!-- ================= VIDEO LIBRARY ================= -->
+<section class="band band-noir" id="dersler">
+  <div class="shell">
+    <div class="lib-head">
+      <div class="sec-head">
+        <span class="eyebrow r" style="color:rgba(168,137,107,.75)">Online Dersler</span>
+        <h2 class="sec-title r" data-d="1" style="color:var(--paper)">Her ders, <span class="accent-italic" style="color:var(--clay)">ayrı</span> bir çalışma.</h2>
+        <p class="lead r" data-d="2" style="color:rgba(245,241,234,.65)">İleri seviye akışları tek tek satın alın, kendi temponuzda izleyin. Her satın alımda 48 saat sınırsız erişim.</p>
+      </div>
+      <div class="lib-note r" data-d="2" style="color:rgba(245,241,234,.5)">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="color:var(--clay)"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        Satın aldıktan sonra 48 saat erişim
+      </div>
+    </div>
+
+    <div class="gallery" id="gallery" data-layout="grid"><!-- rendered by app.js --></div>
+    <!-- Load-more button — managed by app.js -->
+    <div id="gallery-foot"></div>
+  </div>
+</section>
+
 <!-- ================= METHODOLOGY ================= -->
-<section class="band band-noir" id="metodoloji">
+<section class="band band-paper" id="metodoloji">
   <div class="shell">
     <div class="sec-head center">
       <span class="eyebrow center r">Metodoloji</span>
@@ -174,27 +195,6 @@
       <span class="pl">Nike</span>
       <span class="pl">Barçın</span>
     </div>
-  </div>
-</section>
-
-<!-- ================= VIDEO LIBRARY ================= -->
-<section class="band band-paper" id="dersler">
-  <div class="shell">
-    <div class="lib-head">
-      <div class="sec-head">
-        <span class="eyebrow r">Online Dersler</span>
-        <h2 class="sec-title r" data-d="1">Her ders, <span class="accent-italic">ayrı</span> bir çalışma.</h2>
-        <p class="lead r" data-d="2">İleri seviye akışları tek tek satın alın, kendi temponuzda izleyin. Her satın alımda 48 saat sınırsız erişim.</p>
-      </div>
-      <div class="lib-note r" data-d="2">
-        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        Satın aldıktan sonra 48 saat erişim
-      </div>
-    </div>
-
-    <div class="gallery" id="gallery" data-layout="grid"><!-- rendered by app.js --></div>
-    <!-- Load-more button — managed by app.js -->
-    <div id="gallery-foot"></div>
   </div>
 </section>
 
@@ -323,6 +323,22 @@
 <button class="to-top" aria-label="Yukarı" onclick="window.scrollTo({top:0,behavior:'smooth'})">
   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
 </button>
+
+<!-- ================= CONFIRM DIALOG ================= -->
+<div class="cdialog-veil" id="cdialogVeil"></div>
+<div class="cdialog" id="cdialog" role="dialog" aria-modal="true" aria-labelledby="cdialog-title" aria-hidden="true">
+  <div class="cdialog-icon">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg>
+  </div>
+  <h3 class="cdialog-title" id="cdialog-title">Dersi satın al</h3>
+  <p class="cdialog-desc" id="cdialog-desc">Ödeme sayfasına geçmek istiyor musunuz?</p>
+  <div class="cdialog-actions">
+    <button class="btn btn-ghost" id="cdialogCancel">İptal</button>
+    <button class="btn btn-clay" id="cdialogOk">Devam Et
+      <svg class="ar" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+    </button>
+  </div>
+</div>
 
 <!-- ================= PURCHASE MODAL ================= -->
 <div class="modal-veil" id="veil"></div>
