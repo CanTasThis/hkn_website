@@ -48,18 +48,30 @@
     <a href="#iletisim">İletişim</a>
   </div>
   <a href="#dersler" class="nav-cta">Derslere Başla</a>
-  <button class="nav-burger" aria-label="Menü"><span></span><span></span><span></span></button>
+  <button class="nav-burger" aria-label="Menü" aria-expanded="false">
+    <svg class="burger-svg" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path class="burger-p1" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"/>
+      <path class="burger-p2" d="M7 16 27 16"/>
+    </svg>
+  </button>
 </nav>
 
 <!-- ================= MOBILE MENU ================= -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#hakkimda">Hakkımda</a>
-  <a href="#metodoloji">Metodoloji</a>
-  <a href="#dersler">Online Dersler</a>
-  <a href="#referanslar">Referanslar</a>
-  <a href="#sss">SSS</a>
-  <a href="#iletisim">İletişim</a>
-  <div class="mm-foot">Balanced Body · Baps Academy</div>
+  <div class="mm-links">
+    <a href="#hakkimda">Hakkımda</a>
+    <a href="#metodoloji">Metodoloji</a>
+    <a href="#dersler">Online Dersler</a>
+    <a href="#referanslar">Referanslar</a>
+    <a href="#sss">SSS</a>
+    <a href="#iletisim">İletişim</a>
+  </div>
+  <div class="mm-bottom">
+    <a href="#dersler" class="btn btn-clay mm-cta">Derslere Başla
+      <svg class="ar" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+    </a>
+    <div class="mm-foot">Balanced Body · Baps Academy</div>
+  </div>
 </div>
 
 <!-- ================= HERO ================= -->
@@ -299,24 +311,43 @@
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="shell">
+
+    <!-- Hero wordmark -->
     <div class="foot-wordmark">HKN<span class="foot-dot">.</span></div>
-    <div class="foot-mid">
-      <p class="foot-tagline">Master Reformer Pilates Eğitmeni<br>İstanbul · Londra · Miami · New York</p>
+
+    <!-- Brand identity row + circular social icon buttons -->
+    <div class="foot-brand-row">
+      <a href="#top" class="foot-brand-link">
+        <span class="foot-brand-name">HKN<span class="foot-dot-sm">.</span></span>
+        <span class="foot-brand-sub">Master Reformer Pilates Eğitmeni</span>
+      </a>
+      <div class="foot-social-icons">
+        <a href="https://instagram.com/hakanustun" class="foot-icon-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://youtube.com/@hakanustun" class="foot-icon-btn" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M21.8 8s-.2-1.4-.8-2c-.76-.8-1.61-.8-2-.85C16.6 5 12 5 12 5s-4.6 0-7 .15c-.39.05-1.24.05-2 .85-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.76.8 1.76.77 2.2.85C6.8 18.9 12 19 12 19s4.2 0 7-.21c.39-.05 1.24-.05 2-.85.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zM9.9 14.6V9.4l5.4 2.6-5.4 2.6z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="foot-rule"></div>
+
+    <!-- Bottom: copyright left, nav links right -->
+    <div class="foot-bottom">
+      <div class="foot-copy">
+        <span>© 2026 HKN · Master Reformer Pilates.</span>
+        <span>İstanbul · Londra · Miami · New York</span>
+      </div>
       <nav class="foot-nav">
         <a href="#hakkimda">Hakkımda</a>
-        <a href="#metodoloji">Metodoloji</a>
         <a href="#dersler">Online Dersler</a>
         <a href="#referanslar">Referanslar</a>
         <a href="#iletisim">İletişim</a>
       </nav>
     </div>
-    <div class="foot-bottom">
-      <span>© 2026 HKN · Master Reformer Pilates. Tüm hakları saklıdır.</span>
-      <div class="socials">
-        <a href="https://instagram.com/hakanustun" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://youtube.com/@hakanustun" target="_blank" rel="noopener noreferrer">YouTube</a>
-      </div>
-    </div>
+
   </div>
 </footer>
 
