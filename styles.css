@@ -1,5 +1,5 @@
 /* ============================================================
-   HAKAN ÜSTÜN — Reformer Pilates
+   HKN — Master Reformer Pilates
    Calm-luxury earth-tone system · cinematic motion
    ============================================================ */
 
@@ -101,6 +101,9 @@ body{
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+  max-width:100%;
+  position:relative;
 }
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
@@ -535,15 +538,29 @@ section{position:relative}
 /* ============================================================
    FOOTER
    ============================================================ */
-.footer{background:var(--noir);color:var(--paper);padding:80px 0 40px;border-top:1px solid rgba(245,241,234,.1)}
-.foot-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;padding-bottom:50px;border-bottom:1px solid rgba(245,241,234,.12)}
-.foot-name{font-family:var(--font-display);font-size:clamp(48px,8vw,120px);line-height:.9;letter-spacing:.02em}
-.foot-name .ust{color:var(--clay)}
-.foot-nav{display:flex;flex-direction:column;gap:14px;font-size:14px;color:rgba(245,241,234,.7)}
-.foot-nav a:hover{color:var(--clay)}
-.foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-top:30px;font-size:12px;letter-spacing:.06em;color:rgba(245,241,234,.5)}
-.foot-bottom .socials{display:flex;gap:22px}
-.foot-bottom .socials a:hover{color:var(--clay)}
+.footer{background:var(--noir);color:var(--paper);padding:80px 0 40px;border-top:2px solid var(--clay)}
+.foot-wordmark{
+  font-family:var(--font-display);
+  font-size:clamp(96px,16vw,240px);
+  line-height:.82;letter-spacing:.06em;
+  color:var(--paper);
+  padding-bottom:40px;
+  border-bottom:1px solid rgba(245,241,234,.1);
+  margin-bottom:44px;
+}
+.foot-dot{color:var(--clay)}
+.foot-mid{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;padding-bottom:44px;border-bottom:1px solid rgba(245,241,234,.1)}
+.foot-tagline{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:rgba(245,241,234,.45);line-height:2}
+.foot-nav{display:flex;flex-direction:column;gap:12px;font-size:14px;letter-spacing:.04em;color:rgba(245,241,234,.65);text-align:right}
+.foot-nav a:hover{color:var(--clay);transition:color .3s}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-top:28px;font-size:11px;letter-spacing:.08em;color:rgba(245,241,234,.35)}
+.foot-bottom .socials{display:flex;gap:24px}
+.foot-bottom .socials a:hover{color:var(--clay);transition:color .3s}
+@media(max-width:680px){
+  .foot-nav{text-align:left}
+  .foot-mid{flex-direction:column;gap:28px}
+  .foot-bottom{flex-direction:column;align-items:flex-start;gap:14px}
+}
 
 /* ============================================================
    PURCHASE MODAL
@@ -628,7 +645,7 @@ section{position:relative}
   .equip{gap:10px 20px}
   .modal-panel{padding:26px 22px}
   .mp-total .tv{font-size:36px}
-  .foot-top{gap:30px}
+  .foot-mid{gap:24px}
   .to-top{right:18px;bottom:18px;width:42px;height:42px}
   .vbody{padding:22px 20px 24px}
   .vfoot{flex-wrap:wrap;gap:14px}
@@ -658,8 +675,8 @@ section{position:relative}
   /* about tag: compact on very small phones */
   .about-tag{left:10px;bottom:12px;padding:10px 12px}
   .about-tag b{font-size:18px}
-  /* footer name: reduce at tiny screens */
-  .foot-name{font-size:clamp(36px,14vw,50px)}
+  /* footer wordmark: reduce at tiny screens */
+  .foot-wordmark{font-size:clamp(72px,20vw,120px)}
   /* modal panel: extra tight */
   .modal-panel{padding:22px 18px}
   .mp-total .tv{font-size:32px}
